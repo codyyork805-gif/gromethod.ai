@@ -32,12 +32,17 @@ body {
   border-radius: 6px;
 }
 .logo-container {
-  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 40px 0 10px 0;
 }
 
 .logo {
   max-width: 220px;
   height: auto;
+  display: block;
 }
+
 
