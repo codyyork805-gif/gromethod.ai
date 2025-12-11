@@ -225,4 +225,219 @@ body {
 }
 
 .section-alt {
-  padding: 3.
+  padding: 3.75rem 0;
+  background: radial-gradient(circle at top, #141923 0, #0B0D0F 70%);
+}
+
+.section-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  margin: 0 0 0.75rem;
+}
+
+.section-intro {
+  max-width: 34rem;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* Method */
+.method-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.method-card {
+  background: rgba(10,12,18,0.85);
+  border-radius: 1rem;
+  padding: 1.4rem 1.3rem;
+  border: 1px solid var(--color-border);
+}
+
+.method-step {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: 0.3rem;
+}
+
+.method-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.method-card p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.method-card ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+  gap: 2rem;
+}
+
+.highlight {
+  margin-top: 0.5rem;
+  color: var(--color-text);
+}
+
+.about-list h3 {
+  margin-top: 0.2rem;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.about-list ul {
+  padding-left: 1.15rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* Services */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: rgba(10,12,18,0.9);
+  border-radius: 1rem;
+  padding: 1.5rem 1.4rem;
+  border: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.service-card-highlight {
+  border-color: rgba(35,196,217,0.5);
+  box-shadow: 0 14px 40px rgba(5,79,98,0.45);
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.testimonial-card {
+  background: rgba(10,12,18,0.9);
+  border-radius: 1rem;
+  padding: 1.3rem 1.2rem;
+  border: 1px solid var(--color-border);
+}
+
+.testimonial-quote {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.testimonial-name {
+  font-size: 0.8rem;
+  color: var(--color-text);
+  margin-top: 0.8rem;
+}
+
+/* Contact */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+  gap: 2rem;
+}
+
+.contact-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-top: 0.8rem;
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid rgba(255,255,255,0.05);
+  background: #050609;
+  padding: 1.8rem 0 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-card {
+    order: -1;
+  }
+
+  .about-grid,
+  .services-grid,
+  .method-grid,
+  .testimonials-grid,
+  .contact-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-card,
+  .service-card,
+  .testimonial-card,
+  .method-card {
+    padding: 1.2rem 1.1rem;
+  }
+}
