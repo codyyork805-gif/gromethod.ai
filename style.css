@@ -394,3 +394,56 @@ input:focus, textarea:focus{
   .nav{ justify-content:flex-start; }
   .brand-logo{ height: 44px; max-width: 220px; }
 }
+/* ===== G.R.O. LOGO FAILSAFE OVERRIDE (paste at bottom) ===== */
+
+/* Prevent any image from acting like an overlay */
+img {
+  position: static !important;
+  inset: auto !important;
+  z-index: auto !important;
+}
+
+/* Keep header above page, but never let its contents block the page */
+.site-header {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 50 !important;
+  overflow: hidden !important; /* critical: stops oversized transparent canvas from blocking */
+}
+
+/* Lock the brand area to a safe height */
+.brand.logo-brand,
+.brand {
+  display: flex !important;
+  align-items: center !important;
+  max-height: 72px !important;
+}
+
+/* Hard-cap the logo (even if the PNG canvas is huge) */
+.brand-logo,
+.brand.logo-brand img,
+.brand img {
+  display: block !important;
+  height: 56px !important;
+  width: auto !important;
+  max-width: 260px !important;
+  object-fit: contain !important;
+  pointer-events: none !important; /* prevents “invisible canvas” from stealing clicks */
+}
+
+/* Keep the link clickable (image ignores pointer, anchor still works) */
+.brand.logo-brand,
+.brand {
+  pointer-events: auto !important;
+}
+
+/* Mobile refinement */
+@media (max-width: 520px) {
+  .brand-logo,
+  .brand.logo-brand img,
+  .brand img {
+    height: 40px !important;
+    max-width: 200px !important;
+  }
+}
+/* ===== END FAILSAFE OVERRIDE ===== */
