@@ -3,108 +3,95 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>G.R.O.™ — AI Business Optimization</title>
-  <meta name="description" content="We bridge the gap between AI and business. Practical AI-driven innovation for growing companies using the G.R.O.™ Method: Gather → Rebuild → Optimize." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>G.R.O.™ — AI Business Consulting</title>
+  <meta name="description" content="G.R.O.™ helps businesses apply AI where it actually works—bridging AI capability and real operations through structured diagnostics, workflow redesign, and optimization." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container nav">
-
-      <!-- LOGO-FOCUSED BRAND (CONSULTING STYLE) -->
-      <a class="brand logo-brand" href="#home" aria-label="G.R.O. Home">
-        <img src="gro-logo.png" alt="G.R.O. — Gather Rebuild Optimize" />
+  <!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="G.R.O. Home">
+        <!-- Logo file must be in repo root -->
+        <img class="brand-logo" src="gro-logo.png" alt="G.R.O. — Gather Rebuild Optimize" />
       </a>
 
-      <nav class="nav-links" aria-label="Primary">
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#what">What We Do</a>
         <a href="#method">Method</a>
-        <a href="#services">Services</a>
-        <a href="#results">Results</a>
-        <a href="#about">About</a>
-        <a class="btn btn-small" href="#contact">Book Diagnostic</a>
+        <a href="#who">Who We Work With</a>
+        <a href="#diagnostic">Diagnostic</a>
+        <a class="btn btn-small" href="#contact">Request a Diagnostic</a>
       </nav>
     </div>
   </header>
 
   <main id="home">
     <!-- HERO -->
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" aria-label="Hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">AI Consulting for Founders & Operators</div>
+          <div class="eyebrow">AI Business Consulting for Founders & Operators</div>
 
-          <h1>We Bridge the Gap Between AI and Business</h1>
+          <h1>We Help Businesses Apply AI Where It Actually Works</h1>
 
           <p class="lead">
-            Practical AI-driven <strong>innovation</strong> for growing companies.
-            We uncover hidden bottlenecks, redesign workflows, and implement AI-enabled systems that
-            reduce friction, save time, and support scalable growth.
+            G.R.O.™ is a structured consulting firm that <strong>bridges the gap between AI capability and real business operations</strong>—
+            turning complexity into practical, repeatable systems.
           </p>
 
           <div class="cta-row">
-            <a class="btn" href="#contact">Analyze My Business + Find Priority AI Wins</a>
+            <a class="btn" href="#contact">Start With a Business Diagnostic</a>
             <a class="link" href="#method">See the G.R.O.™ Method →</a>
           </div>
 
-          <div class="hero-notes">
-            <span class="pill">Clarity-first</span>
-            <span class="pill">Systems, not hype</span>
-            <span class="pill">Claim-safe outcomes</span>
+          <div class="trust-row" aria-label="Trust signals">
+            <div class="trust-pill">Clarity before tools</div>
+            <div class="trust-pill">Systems before scale</div>
+            <div class="trust-pill">Probability over promises</div>
           </div>
         </div>
 
-        <div class="hero-card" aria-label="G.R.O. Snapshot">
+        <aside class="hero-card" aria-label="Diagnostic summary">
           <div class="card-top">
-            <div class="ring"></div>
-            <div>
-              <div class="card-title">Start with a Diagnostic</div>
-              <div class="card-sub">Fast clarity + a prioritized AI plan</div>
-            </div>
+            <div class="card-title">Business Diagnostic</div>
+            <div class="card-sub">A structured clarity-first entry point</div>
           </div>
 
-          <div class="card-body">
-            <div class="metric">
-              <div class="metric-num">7–14 days</div>
-              <div class="metric-label">Typical time-to-first visible win</div>
-            </div>
-
-            <div class="list">
-              <div class="list-item">AI Opportunity Map (where AI helps — and where it shouldn’t)</div>
-              <div class="list-item">Workflow redesign + minimal tool stack</div>
-              <div class="list-item">SOPs + prompt systems your team can reuse</div>
-            </div>
+          <div class="card-list" role="list">
+            <div class="card-item" role="listitem">AI Opportunity Map (where AI helps—and where it shouldn’t)</div>
+            <div class="card-item" role="listitem">Priority workflow plan (fast wins + durable systems)</div>
+            <div class="card-item" role="listitem">Risk scan (legal, financial, reputational) + fixes</div>
           </div>
 
           <div class="card-foot">
-            <a class="btn btn-ghost" href="#contact">Book My Diagnostic</a>
-            <span class="fineprint">Outcomes vary by business context and execution.</span>
+            <div class="fineprint">
+              Outcomes vary by context and execution. We design for measurable improvement—not guarantees.
+            </div>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
 
-    <!-- PROBLEM -->
-    <section class="section" id="problem">
+    <!-- PROBLEM / MIRROR -->
+    <section class="section" id="problem" aria-label="The problem">
       <div class="container">
-        <h2>AI Is Everywhere — But Most Businesses Don’t Know Where to Apply It</h2>
+        <h2>Most Businesses Know AI Matters — Few Know Where to Use It</h2>
         <p class="muted">
-          Tools are advancing fast. Most teams feel pressure to “use AI” but lack clarity on what matters,
-          what to ignore, and how to implement without disruption.
+          Tools are everywhere. Advice is inconsistent. Most teams are left guessing what to automate, what to keep human,
+          and how to adopt AI without disrupting operations.
         </p>
 
         <div class="grid-2">
           <div class="panel">
             <h3>Common symptoms</h3>
             <ul>
-              <li>Tool overload (ChatGPT, Zapier, CRMs — no strategy)</li>
-              <li>Manual repeat work consuming expensive hours</li>
+              <li>Tool overload with no unified strategy</li>
+              <li>Manual repeat work consuming expensive time</li>
               <li>Unclear priorities: “Where does AI actually help us?”</li>
-              <li>Missed opportunities due to confusion or fear of change</li>
+              <li>Adoption friction due to uncertainty and risk</li>
             </ul>
           </div>
 
@@ -112,158 +99,225 @@
             <h3>What we do instead</h3>
             <ul>
               <li>Start with clarity: map workflows and constraints</li>
-              <li>Find fast wins first (time-to-value compression)</li>
-              <li>Build systems your team can actually run</li>
-              <li>Use claim-safe, defensible language and scope</li>
+              <li>Prioritize time-to-value without reckless change</li>
+              <li>Implement systems your team can run internally</li>
+              <li>Document everything to reduce dependency</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE DO -->
+    <section class="section section-alt" id="what" aria-label="What we do">
+      <div class="container">
+        <h2>What We Do</h2>
+        <p class="muted">
+          We deliver operational clarity and AI-enabled execution through concrete deliverables—without hype.
+        </p>
+
+        <div class="grid-4">
+          <div class="panel">
+            <h3>Diagnostics</h3>
+            <p class="muted">Opportunity mapping, bottleneck identification, and prioritization.</p>
+          </div>
+          <div class="panel">
+            <h3>Workflow Design</h3>
+            <p class="muted">Rebuild key workflows with clear human + AI responsibilities.</p>
+          </div>
+          <div class="panel">
+            <h3>Implementation</h3>
+            <p class="muted">Practical rollout with SOPs and prompt systems.</p>
+          </div>
+          <div class="panel">
+            <h3>Optimization</h3>
+            <p class="muted">Ongoing iteration as your business scales.</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- METHOD -->
-    <section class="section section-alt" id="method">
+    <section class="section" id="method" aria-label="The method">
       <div class="container">
         <h2>The G.R.O.™ Method</h2>
-        <p class="muted">A structured, no-fluff framework for applying AI where it actually matters.</p>
+        <p class="muted">
+          A disciplined framework designed to reduce uncertainty, create operational clarity, and install systems that compound.
+        </p>
 
         <div class="grid-3">
           <div class="panel">
-            <div class="kicker">G — Gather</div>
+            <div class="kicker">Gather</div>
             <h3>Map your business reality</h3>
             <ul>
-              <li>Identify bottlenecks, repetition, decision friction</li>
-              <li>Clarify goals, constraints, and risk boundaries</li>
-              <li>Separate signal from noise</li>
+              <li>Processes, bottlenecks, decision friction</li>
+              <li>Constraints, compliance, and risk boundaries</li>
+              <li>Signal vs. noise separation</li>
             </ul>
           </div>
 
           <div class="panel">
-            <div class="kicker">R — Rebuild</div>
+            <div class="kicker">Rebuild</div>
             <h3>Redesign workflows with intention</h3>
             <ul>
-              <li>Replace manual effort with AI-assisted processes</li>
-              <li>Reduce tool sprawl; keep stacks minimal</li>
-              <li>Define clear human vs. AI responsibilities</li>
+              <li>AI where it helps; humans where they matter</li>
+              <li>Minimal, controlled tooling (avoid stack sprawl)</li>
+              <li>Clear ownership and handoffs</li>
             </ul>
           </div>
 
           <div class="panel">
-            <div class="kicker">O — Optimize</div>
+            <div class="kicker">Optimize</div>
             <h3>Implement, document, refine</h3>
             <ul>
-              <li>Install AI-enabled workflows</li>
-              <li>Create SOPs and prompt systems</li>
-              <li>Iterate based on measurable early wins</li>
+              <li>SOPs + prompt systems for internal adoption</li>
+              <li>Measurable improvements and iteration loops</li>
+              <li>Systemization for scale and retention</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="section" id="services">
+    <!-- WHO WE WORK WITH -->
+    <section class="section section-alt" id="who" aria-label="Who we work with">
       <div class="container">
-        <h2>Services</h2>
-        <p class="muted">We sell outcomes through deliverables — not hype.</p>
+        <h2>Who We Work With</h2>
+        <p class="muted">Clear fit protects outcomes, trust, and long-term partnership quality.</p>
 
-        <div class="grid-3">
-          <div class="panel">
-            <h3>G.R.O.™ Diagnostic</h3>
-            <p class="muted">A structured analysis of workflows, constraints, and highest-leverage AI opportunities.</p>
-            <ul>
-              <li>AI Opportunity Map</li>
-              <li>Priority win list + quick validation plan</li>
-              <li>Risk flags + fixes (legal/financial/reputation)</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>Workflow Rebuild</h3>
-            <p class="muted">Redesign core operations and install AI-enabled workflows with clear ownership.</p>
-            <ul>
-              <li>Process redesign + minimal tool recommendations</li>
-              <li>Prompt systems tailored to your business</li>
-              <li>SOPs for internal adoption</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>Optimization Retainer</h3>
-            <p class="muted">Ongoing iteration, measurement, and refinement as your business scales.</p>
-            <ul>
-              <li>Monthly optimization loop</li>
-              <li>New workflow rollouts and training support</li>
-              <li>Template + IP systemization</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RESULTS -->
-    <section class="section section-alt" id="results">
-      <div class="container">
-        <h2>Results</h2>
-        <p class="muted">
-          We focus on probability and process. Outcomes vary by business context, team execution, and market conditions.
-        </p>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <div class="container">
-        <h2>About G.R.O.™</h2>
         <div class="grid-2">
           <div class="panel">
-            <h3>Our philosophy</h3>
-            <p class="muted">
-              AI should reduce friction and amplify good operations—not create tool chaos.
-              We bridge strategy, systems, and AI innovation so teams can execute with clarity.
-            </p>
+            <h3>Good fit</h3>
+            <ul>
+              <li>Service businesses with repeatable workflows</li>
+              <li>Founder-led or operator-led teams</li>
+              <li>Businesses seeking clarity—not hype</li>
+              <li>Teams willing to follow structure</li>
+            </ul>
           </div>
 
           <div class="panel">
-            <h3>Who we work with</h3>
+            <h3>Not a fit</h3>
             <ul>
-              <li>Small to mid-sized service businesses</li>
-              <li>Founders and operators who want structured execution</li>
-              <li>Teams ready to apply AI thoughtfully</li>
+              <li>Anyone seeking guaranteed financial outcomes</li>
+              <li>One-off “tool installs” with no strategy</li>
+              <li>Organizations unwilling to document and adopt</li>
+              <li>“AI everywhere” requests without boundaries</li>
             </ul>
-            <p class="fineprint">
-              Not a fit: anyone seeking guaranteed financial outcomes or “AI everywhere” without structure.
-            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAGNOSTIC -->
+    <section class="section" id="diagnostic" aria-label="Diagnostic">
+      <div class="container">
+        <h2>Start With a G.R.O.™ Diagnostic</h2>
+        <p class="muted">
+          The diagnostic establishes where AI applies, where it doesn’t, what to prioritize, and what to ignore—
+          creating clarity whether we work together or not.
+        </p>
+
+        <div class="grid-2">
+          <div class="panel">
+            <h3>You receive</h3>
+            <ul>
+              <li>AI Opportunity Map + priority workflow plan</li>
+              <li>Fast validation path (low-risk, high signal)</li>
+              <li>Risk scan (legal/financial/reputation) + fixes</li>
+              <li>Next-step implementation roadmap</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3>Retention by design</h3>
+            <ul>
+              <li>Documentation-first systems reduce dependency</li>
+              <li>Optimization loops create compounding value</li>
+              <li>Clear scope prevents surprises and creep</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section section-alt" id="contact">
+    <section class="section section-alt" id="contact" aria-label="Contact">
       <div class="container">
-        <h2>Book a G.R.O.™ Diagnostic</h2>
+        <h2>Request a Diagnostic</h2>
         <p class="muted">
           Send a short message. We’ll reply with next steps and a clean intake.
         </p>
+
+        <div class="contact-grid">
+          <div class="panel">
+            <h3>Quick intake</h3>
+
+            <!-- Replace action later with Netlify Forms or your CRM -->
+            <form class="form" action="#" method="post" onsubmit="return false;">
+              <label>
+                Name
+                <input type="text" name="name" placeholder="Your name" />
+              </label>
+
+              <label>
+                Email
+                <input type="email" name="email" placeholder="you@company.com" />
+              </label>
+
+              <label>
+                Business / Website
+                <input type="text" name="business" placeholder="Business name or URL" />
+              </label>
+
+              <label>
+                What do you want AI to improve first?
+                <textarea name="message" rows="5" placeholder="Example: reduce admin tasks, improve lead response, reporting, operations workflows..."></textarea>
+              </label>
+
+              <button class="btn" type="submit">Send (Placeholder)</button>
+
+              <p class="fineprint">
+                Prefer email? <a class="inline-link" href="mailto:contact@gromethod.ai">contact@gromethod.ai</a>
+              </p>
+            </form>
+          </div>
+
+          <div class="panel">
+            <h3>Professional note</h3>
+            <p class="muted">
+              G.R.O.™ provides business consulting and AI system design.
+              We do not guarantee specific financial outcomes; results depend on context, execution, and market conditions.
+            </p>
+
+            <div class="callout">
+              <strong>Expectation control:</strong> We design for measurable improvement and operational clarity—without overpromising.
+            </div>
+
+            <div class="mini-cta">
+              <a class="btn btn-ghost" href="#diagnostic">Review the Diagnostic →</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer class="site-footer">
+    <!-- FOOTER -->
+    <footer class="site-footer" role="contentinfo">
       <div class="container footer-grid">
-        <div>
-          <div class="brand-mark footer-brand">G.R.O.<span class="tm">™</span></div>
+        <div class="footer-left">
+          <div class="footer-brand">G.R.O.<span class="tm">™</span></div>
           <div class="muted">We bridge the gap between AI and business.</div>
         </div>
 
-        <div class="footer-links">
+        <div class="footer-links" aria-label="Footer links">
+          <a href="#what">What We Do</a>
           <a href="#method">Method</a>
-          <a href="#services">Services</a>
-          <a href="#results">Results</a>
+          <a href="#diagnostic">Diagnostic</a>
           <a href="#contact">Contact</a>
         </div>
 
-        <div class="fineprint">
+        <div class="fineprint footer-right">
           © <span id="year"></span> G.R.O.™. All rights reserved.
         </div>
       </div>
