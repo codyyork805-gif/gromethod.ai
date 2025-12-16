@@ -9,16 +9,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Optional: system fonts only (fast). If you want a premium font later, I can add it. -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="#home" aria-label="G.R.O. Home">
-        <span class="brand-mark">G.R.O.<span class="tm">™</span></span>
-        <span class="brand-sub">Gather • Rebuild • Optimize</span>
+
+      <!-- LOGO-FOCUSED BRAND (CONSULTING STYLE) -->
+      <a class="brand logo-brand" href="#home" aria-label="G.R.O. Home">
+        <img src="gro-logo.png" alt="G.R.O. — Gather Rebuild Optimize" />
       </a>
 
       <nav class="nav-links" aria-label="Primary">
@@ -201,33 +201,13 @@
       </div>
     </section>
 
-    <!-- RESULTS / PROOF -->
+    <!-- RESULTS -->
     <section class="section section-alt" id="results">
       <div class="container">
         <h2>Results</h2>
         <p class="muted">
           We focus on probability and process. Outcomes vary by business context, team execution, and market conditions.
         </p>
-
-        <div class="grid-2">
-          <div class="panel">
-            <h3>What “early wins” often look like</h3>
-            <ul>
-              <li>Reduced admin workload in one core workflow</li>
-              <li>Faster internal reporting and decision visibility</li>
-              <li>Cleaner lead handling or customer follow-up systems</li>
-            </ul>
-          </div>
-
-          <div class="panel">
-            <h3>Trust by design</h3>
-            <ul>
-              <li>No guaranteed revenue claims</li>
-              <li>Clear scope boundaries to prevent surprises</li>
-              <li>Documentation-first to reduce dependency</li>
-            </ul>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -266,51 +246,6 @@
         <p class="muted">
           Send a short message. We’ll reply with next steps and a clean intake.
         </p>
-
-        <div class="contact-grid">
-          <div class="panel">
-            <h3>Quick intake</h3>
-            <form class="form" action="#" method="post" onsubmit="return false;">
-              <label>
-                Name
-                <input type="text" name="name" placeholder="Your name" />
-              </label>
-              <label>
-                Email
-                <input type="email" name="email" placeholder="you@company.com" />
-              </label>
-              <label>
-                Business / Website
-                <input type="text" name="business" placeholder="Business name or URL" />
-              </label>
-              <label>
-                What do you want AI to improve first?
-                <textarea name="message" rows="5" placeholder="Example: reduce admin tasks, improve lead response, reporting, ops workflows..."></textarea>
-              </label>
-
-              <!-- Replace this with your real booking link later -->
-              <button class="btn" type="submit">Send (Placeholder)</button>
-
-              <p class="fineprint">
-                Tip: If you have a Calendly/Google Calendar link, tell me and I’ll wire it in.
-              </p>
-            </form>
-          </div>
-
-          <div class="panel">
-            <h3>What happens next</h3>
-            <ol class="steps">
-              <li><strong>Gather:</strong> We map your workflows and constraints.</li>
-              <li><strong>Rebuild:</strong> We design a minimal, high-leverage AI system.</li>
-              <li><strong>Optimize:</strong> We implement + document + iterate toward early wins.</li>
-            </ol>
-
-            <div class="disclaimer">
-              <strong>Note:</strong> G.R.O.™ provides business consulting and AI system design.
-              We do not guarantee specific financial outcomes; results depend on business context and execution.
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -336,7 +271,6 @@
   </main>
 
   <script>
-    // footer year
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
