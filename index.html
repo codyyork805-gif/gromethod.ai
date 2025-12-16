@@ -11,11 +11,23 @@
 
 <body>
   <!-- HEADER -->
-  <header class="site-header" role="banner">
+  <header class="site-header" role="banner" style="overflow:hidden;">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="G.R.O. Home">
-        <!-- Logo file must be in repo root -->
-        <img class="brand-logo" src="gro-logo.png" alt="G.R.O. — Gather Rebuild Optimize" />
+      <a class="brand" href="#home" aria-label="G.R.O. Home" style="display:flex;align-items:center;flex-shrink:0;">
+        <!-- FIXED LOGO (hard constrained, cannot block content) -->
+        <img
+          class="brand-logo"
+          src="gro-logo-transparent.png"
+          alt="G.R.O. — Gather Rebuild Optimize"
+          style="
+            height:56px;
+            width:auto;
+            max-width:260px;
+            display:block;
+            object-fit:contain;
+            pointer-events:none;
+          "
+        />
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
