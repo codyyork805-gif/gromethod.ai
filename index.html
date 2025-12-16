@@ -265,16 +265,25 @@
           <div class="panel">
             <h3>Quick intake</h3>
 
-            <!-- Replace action later with Netlify Forms or your CRM -->
-            <form class="form" action="#" method="post" onsubmit="return false;">
+            <!-- FormSubmit: sends directly to contact@gromethod.ai -->
+            <form
+              action="https://formsubmit.co/contact@gromethod.ai"
+              method="POST"
+              class="form"
+            >
+              <!-- Configuration -->
+              <input type="hidden" name="_subject" value="New G.R.O. Website Inquiry">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+
               <label>
                 Name
-                <input type="text" name="name" placeholder="Your name" />
+                <input type="text" name="name" placeholder="Your name" required />
               </label>
 
               <label>
                 Email
-                <input type="email" name="email" placeholder="you@company.com" />
+                <input type="email" name="email" placeholder="you@company.com" required />
               </label>
 
               <label>
@@ -284,10 +293,10 @@
 
               <label>
                 What do you want AI to improve first?
-                <textarea name="message" rows="5" placeholder="Example: reduce admin tasks, improve lead response, reporting, operations workflows..."></textarea>
+                <textarea name="message" rows="5" placeholder="Example: reduce admin tasks, improve lead response, reporting, operations workflows..." required></textarea>
               </label>
 
-              <button class="btn" type="submit">Send (Placeholder)</button>
+              <button class="btn" type="submit">Send</button>
 
               <p class="fineprint">
                 Prefer email? <a class="inline-link" href="mailto:contact@gromethod.ai">contact@gromethod.ai</a>
