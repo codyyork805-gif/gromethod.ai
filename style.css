@@ -1,4 +1,4 @@
-::root{
+:root{
   --bg: #0B0D0F;
   --panel: rgba(255,255,255,.06);
   --panel2: rgba(255,255,255,.04);
@@ -27,6 +27,12 @@ body{
 
 a{ color: inherit; text-decoration:none; }
 
+/* Prevent any image from overflowing its container */
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 .container{
   width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
@@ -51,27 +57,28 @@ a{ color: inherit; text-decoration:none; }
   padding: 16px 0;
 }
 
-/* === CONSULTING-GRADE LOGO EMPHASIS (ONLY ADDITION) === */
-
-.logo-brand{
-  display: flex;
-  align-items: center;
+/* ====== Brand logo (hard constraints so it never blocks content) ====== */
+.brand.logo-brand{
+  display:flex;
+  align-items:center;
+  flex: 0 0 auto;
 }
 
-.logo-brand img{
-  height: 46px;     /* deliberate, authoritative size */
+.brand.logo-brand img{
+  height: 56px;     /* “big consulting” emphasis */
   width: auto;
-  display: block;
+  max-width: 260px; /* prevents logo from taking over */
+  display:block;
 }
 
-/* Mobile refinement */
+/* Mobile: keep it premium, not overwhelming */
 @media (max-width: 520px){
-  .logo-brand img{
-    height: 36px;
+  .brand.logo-brand img{
+    height: 40px;
+    max-width: 200px;
   }
 }
-
-/* === END LOGO ADDITION === */
+/* ====== End logo constraints ====== */
 
 .nav-links{
   display:flex;
@@ -207,6 +214,4 @@ h2{
   .grid-2{
     grid-template-columns: 1fr;
   }
-}
-
 }
