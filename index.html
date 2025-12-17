@@ -265,6 +265,110 @@
           <div class="panel">
             <h3>Quick intake</h3>
 
+            <!-- MINI DIAGNOSTIC (Rules-based) -->
+            <div class="panel" style="margin-top:16px;">
+              <h3>60-Second Mini Diagnostic</h3>
+              <p class="muted">Answer 3 questions to get an instant clarity snapshot.</p>
+
+              <div class="form">
+                <label>
+                  1) Where is the biggest friction right now?
+                  <select id="q1" required>
+                    <option value="">Select one…</option>
+                    <option value="leads">Leads / pipeline</option>
+                    <option value="sales">Sales process / follow-up</option>
+                    <option value="ops">Operations / delivery</option>
+                    <option value="admin">Admin / back office</option>
+                    <option value="data">Reporting / visibility</option>
+                  </select>
+                </label>
+
+                <label>
+                  2) What breaks first when volume increases?
+                  <select id="q2" required>
+                    <option value="">Select one…</option>
+                    <option value="speed">Response speed / handoffs</option>
+                    <option value="quality">Quality control</option>
+                    <option value="consistency">Consistency / repeatability</option>
+                    <option value="ownership">Ownership / accountability</option>
+                    <option value="tools">Tool chaos / “too many systems”</option>
+                  </select>
+                </label>
+
+                <label>
+                  3) How is work currently documented?
+                  <select id="q3" required>
+                    <option value="">Select one…</option>
+                    <option value="none">Not documented</option>
+                    <option value="some">Some notes, not standardized</option>
+                    <option value="sops">SOPs exist, inconsistent use</option>
+                    <option value="strong">Clear SOPs + consistent adoption</option>
+                  </select>
+                </label>
+
+                <button class="btn" type="button" onclick="runMiniDiagnostic()">Run Diagnostic</button>
+
+                <div id="diagResult" class="callout" style="display:none;margin-top:14px;"></div>
+              </div>
+            </div>
+
+            <script>
+              function runMiniDiagnostic() {
+                const q1 = document.getElementById('q1').value;
+                const q2 = document.getElementById('q2').value;
+                const q3 = document.getElementById('q3').value;
+                const box = document.getElementById('diagResult');
+
+                if (!q1 || !q2 || !q3) {
+                  box.style.display = 'block';
+                  box.innerHTML = "<strong>Quick note:</strong> Select an option for each question to generate your snapshot.";
+                  return;
+                }
+
+                // Simple scoring
+                let score = 0;
+                if (q3 === 'none') score += 2;
+                if (q3 === 'some') score += 1;
+                if (q2 === 'tools') score += 2;
+                if (q2 === 'ownership') score += 2;
+                if (q2 === 'consistency') score += 1;
+                if (q1 === 'ops' || q1 === 'data') score += 1;
+
+                // Outputs
+                const topRisk =
+                  (q3 === 'none' || q3 === 'some') ? "Documentation gap (knowledge trapped in people’s heads)"
+                  : "Adoption gap (SOPs exist but execution may be inconsistent)";
+
+                const fastWin =
+                  (q2 === 'speed') ? "Install a single intake + triage workflow (reduce back-and-forth)."
+                  : (q2 === 'tools') ? "Consolidate to one source of truth (stop tool sprawl)."
+                  : (q2 === 'ownership') ? "Assign clear owners for handoffs + define “done.”"
+                  : (q2 === 'quality') ? "Add a lightweight QA checkpoint + checklist."
+                  : "Standardize the workflow into a repeatable SOP + checklist.";
+
+                const aiWhereHelps =
+                  (q1 === 'leads' || q1 === 'sales') ? "AI can help with lead intake, qualification, follow-ups, and response speed."
+                  : (q1 === 'ops') ? "AI can help with SOPs, checklists, handoffs, and internal knowledge search."
+                  : (q1 === 'admin') ? "AI can help with document generation, email handling, and repeat admin tasks."
+                  : "AI can help with reporting summaries, KPI dashboards, and anomaly detection.";
+
+                const maturity =
+                  (score >= 4) ? "Early-stage systems (high leverage available fast)"
+                  : (score >= 2) ? "Mid-stage systems (needs structure + adoption)"
+                  : "Strong foundation (optimize + automate carefully)";
+
+                box.style.display = 'block';
+                box.innerHTML = `
+                  <strong>Clarity Snapshot:</strong><br>
+                  • Current stage: ${maturity}<br>
+                  • Primary risk: ${topRisk}<br>
+                  • Fastest win: ${fastWin}<br>
+                  • Where AI helps first: ${aiWhereHelps}<br><br>
+                  <strong>Next step (G.R.O.™):</strong> Gather → map the workflow + constraints, then rebuild one bottleneck into a repeatable system.
+                `;
+              }
+            </script>
+
             <!-- ✅ FIXED: FormSubmit wired to contact@gromethod.ai -->
             <form
               class="form"
