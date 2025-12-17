@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-<link rel="icon" href="/favicon.ico">
+<head>
+  <link rel="icon" href="/favicon.ico">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>G.R.O.™ — AI Business Consulting</title>
@@ -325,7 +326,6 @@
                   return;
                 }
 
-                // Simple scoring
                 let score = 0;
                 if (q3 === 'none') score += 2;
                 if (q3 === 'some') score += 1;
@@ -334,10 +334,10 @@
                 if (q2 === 'consistency') score += 1;
                 if (q1 === 'ops' || q1 === 'data') score += 1;
 
-                // Outputs
                 const topRisk =
-                  (q3 === 'none' || q3 === 'some') ? "Documentation gap (knowledge trapped in people’s heads)"
-                  : "Adoption gap (SOPs exist but execution may be inconsistent)";
+                  (q3 === 'none' || q3 === 'some')
+                    ? "Documentation gap (knowledge trapped in people’s heads)"
+                    : "Adoption gap (SOPs exist but execution may be inconsistent)";
 
                 const fastWin =
                   (q2 === 'speed') ? "Install a single intake + triage workflow (reduce back-and-forth)."
@@ -347,10 +347,13 @@
                   : "Standardize the workflow into a repeatable SOP + checklist.";
 
                 const aiWhereHelps =
-                  (q1 === 'leads' || q1 === 'sales') ? "AI can help with lead intake, qualification, follow-ups, and response speed."
-                  : (q1 === 'ops') ? "AI can help with SOPs, checklists, handoffs, and internal knowledge search."
-                  : (q1 === 'admin') ? "AI can help with document generation, email handling, and repeat admin tasks."
-                  : "AI can help with reporting summaries, KPI dashboards, and anomaly detection.";
+                  (q1 === 'leads' || q1 === 'sales')
+                    ? "AI can help with lead intake, qualification, follow-ups, and response speed."
+                    : (q1 === 'ops')
+                    ? "AI can help with SOPs, checklists, handoffs, and internal knowledge search."
+                    : (q1 === 'admin')
+                    ? "AI can help with document generation, email handling, and repeat admin tasks."
+                    : "AI can help with reporting summaries, KPI dashboards, and anomaly detection.";
 
                 const maturity =
                   (score >= 4) ? "Early-stage systems (high leverage available fast)"
@@ -369,7 +372,7 @@
               }
             </script>
 
-            <!-- ✅ FIXED: FormSubmit wired to contact@gromethod.ai -->
+            <!-- FORM -->
             <form
               class="form"
               action="https://formsubmit.co/contact@gromethod.ai"
@@ -398,7 +401,6 @@
                 What do you want AI to improve first?
                 <textarea name="message" rows="5" placeholder="Example: reduce admin tasks, improve lead response, reporting, operations workflows..." required></textarea>
 
-                <!-- ✅ ADDED: subtle guided prompts (collapsible, no CSS changes required) -->
                 <details class="fineprint" style="margin-top:8px;">
                   <summary style="cursor:pointer;">
                     Need ideas? View sample prompts ▸
